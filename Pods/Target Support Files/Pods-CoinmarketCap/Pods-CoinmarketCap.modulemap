@@ -1,0 +1,6 @@
+framework module Pods_CoinmarketCap {
+  umbrella header "Pods-CoinmarketCap-umbrella.h"
+
+  export *
+  module * { export * }
+}

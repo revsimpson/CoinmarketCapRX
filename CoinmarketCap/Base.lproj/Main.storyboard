@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XHw-cs-QHE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-CondensedMedium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoinmarketCap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nsX-Ay-E2B">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RefreshCell" textLabel="zrK-Ra-IhV" detailTextLabel="G7q-P0-rF3" style="IBUITableViewCellStyleSubtitle" id="013-KN-BBW">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="013-KN-BBW" id="3Bu-MT-fGm">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zrK-Ra-IhV">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G7q-P0-rF3">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="18D-3x-c1k"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="d8Q-rN-j1k"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nsX-Ay-E2B" secondAttribute="bottom" id="0gx-H0-Jb7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nsX-Ay-E2B" secondAttribute="trailing" id="J81-gv-8nT"/>
+                            <constraint firstItem="nsX-Ay-E2B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KWL-3q-yEh"/>
+                            <constraint firstItem="nsX-Ay-E2B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UlV-5v-uKi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dMw-FF-5hh">
+                        <rightBarButtonItems>
+                            <barButtonItem title=" ▼  " id="X1Z-Nr-gTT">
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="SmallClicked:" destination="BYZ-38-t0r" id="Kut-HY-QMc"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title=" ▲ " id="PNa-i8-n7g">
+                                <color key="tintColor" red="0.0" green="0.46904903009999999" blue="0.82339843749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="bigClicked:" destination="BYZ-38-t0r" id="6NZ-vA-mdW"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="dwr-Lp-VTU">
+                                <color key="tintColor" red="0.28776392410000001" green="0.50830876830000005" blue="0.43508553890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </barButtonItem>
+                            <barButtonItem title="24h⇧" id="KCa-sV-i1y">
+                                <connections>
+                                    <action selector="Winners24hPressed:" destination="BYZ-38-t0r" id="JIg-fA-1ee"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="24h⇩" id="wHr-V9-f3w">
+                                <connections>
+                                    <action selector="Losers24hPressed:" destination="BYZ-38-t0r" id="BaV-9L-BxS"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title=" █ " id="IVk-KP-vUe">
+                                <color key="tintColor" red="1" green="0.0" blue="0.037066020669999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="showOnlyRedPressed:" destination="BYZ-38-t0r" id="zJg-ue-X7N"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title=" █ " id="jDx-hg-BXC">
+                                <color key="tintColor" red="0.098779508590528156" green="0.64072265625000002" blue="0.005504963343455847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="showOnlyGreenPressed:" destination="BYZ-38-t0r" id="wb2-YU-vap"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="nsX-Ay-E2B" id="fqo-5T-fzF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="364" y="31.934032983508249"/>
+        </scene>
+        <!--Detail CurrencyID Controller-->
+        <scene sceneID="oNf-lt-agi">
+            <objects>
+                <viewController restorationIdentifier="DetailCurrencyID" storyboardIdentifier="DetailCurrencyID" id="hFV-6b-6Lu" customClass="DetailCurrencyIDController" customModule="CoinmarketCap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CJK-xK-Gtb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mmi-df-Vho" customClass="CardView" customModule="CoinmarketCap" customModuleProvider="target">
+                                <rect key="frame" x="24" y="30" width="327" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1h :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08v-Jx-m68">
+                                        <rect key="frame" x="8" y="43" width="22.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="18"/>
+                                        <color key="textColor" red="0.95144807450000002" green="0.94674715710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available supply : 176.123.123.123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ei8-aP-k7l">
+                                        <rect key="frame" x="8" y="111" width="218" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="20"/>
+                                        <color key="textColor" red="0.84367882009999995" green="0.69401542309999997" blue="0.001432663181" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max supply : 176.123.123.123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8t-Om-tR9">
+                                        <rect key="frame" x="8" y="81" width="187" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="gNJ-qT-gLu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.80800781249999998" blue="0.43695969569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNI-Wd-or9">
+                                        <rect key="frame" x="38.5" y="43" width="38" height="22"/>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="18"/>
+                                        <color key="textColor" red="0.28776392410000001" green="0.50830876830000005" blue="0.43508553890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24h :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHO-Zd-FLM">
+                                        <rect key="frame" x="88.5" y="43" width="29" height="22"/>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="18"/>
+                                        <color key="textColor" red="0.95144807450000002" green="0.94674715710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrs-2l-h3l">
+                                        <rect key="frame" x="125.5" y="43" width="38" height="22"/>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="18"/>
+                                        <color key="textColor" red="0.28776392410000001" green="0.50830876830000005" blue="0.43508553890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7d :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pM-IO-pun">
+                                        <rect key="frame" x="175" y="43" width="22.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="18"/>
+                                        <color key="textColor" red="0.95144807450000002" green="0.94674715710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total supply : 176.123.123.123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhV-iC-4Pq">
+                                        <rect key="frame" x="8" y="143.5" width="190.5" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="20"/>
+                                        <color key="textColor" red="0.92920616379999998" green="0.89360535389999995" blue="0.00065713180739999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wY5-Vp-xPZ">
+                                        <rect key="frame" x="205.5" y="43" width="38" height="22"/>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="18"/>
+                                        <color key="textColor" red="0.28776392410000001" green="0.50830876830000005" blue="0.43508553890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="JNI-Wd-or9" firstAttribute="bottom" secondItem="08v-Jx-m68" secondAttribute="bottom" id="0N9-dD-Pf8"/>
+                                    <constraint firstItem="08v-Jx-m68" firstAttribute="leading" secondItem="Mmi-df-Vho" secondAttribute="leading" constant="8" id="0aM-vW-aPk"/>
+                                    <constraint firstItem="qHO-Zd-FLM" firstAttribute="leading" secondItem="JNI-Wd-or9" secondAttribute="trailing" constant="12" id="0pa-R8-3lo"/>
+                                    <constraint firstItem="EhV-iC-4Pq" firstAttribute="leading" secondItem="08v-Jx-m68" secondAttribute="leading" id="4NK-g1-q9N"/>
+                                    <constraint firstItem="wY5-Vp-xPZ" firstAttribute="bottom" secondItem="08v-Jx-m68" secondAttribute="bottom" id="71w-4w-Mfp"/>
+                                    <constraint firstItem="8pM-IO-pun" firstAttribute="bottom" secondItem="08v-Jx-m68" secondAttribute="bottom" id="EcO-pm-x93"/>
+                                    <constraint firstItem="JNI-Wd-or9" firstAttribute="leading" secondItem="08v-Jx-m68" secondAttribute="trailing" constant="8" id="FjH-PY-HxM"/>
+                                    <constraint firstItem="Y8t-Om-tR9" firstAttribute="leading" secondItem="08v-Jx-m68" secondAttribute="leading" id="Uow-HW-xps"/>
+                                    <constraint firstItem="Y8t-Om-tR9" firstAttribute="top" secondItem="08v-Jx-m68" secondAttribute="bottom" constant="16" id="WSS-Ct-Hdd"/>
+                                    <constraint firstItem="nrs-2l-h3l" firstAttribute="bottom" secondItem="08v-Jx-m68" secondAttribute="bottom" id="XYr-VR-gFd"/>
+                                    <constraint firstItem="8pM-IO-pun" firstAttribute="leading" secondItem="nrs-2l-h3l" secondAttribute="trailing" constant="12" id="Y8L-Vt-Ah5"/>
+                                    <constraint firstItem="nrs-2l-h3l" firstAttribute="leading" secondItem="qHO-Zd-FLM" secondAttribute="trailing" constant="8" id="YX9-1I-5pF"/>
+                                    <constraint firstItem="wY5-Vp-xPZ" firstAttribute="leading" secondItem="8pM-IO-pun" secondAttribute="trailing" constant="8" id="egl-Ee-8yB"/>
+                                    <constraint firstAttribute="height" constant="240" id="mUx-rN-m0C"/>
+                                    <constraint firstItem="qHO-Zd-FLM" firstAttribute="bottom" secondItem="08v-Jx-m68" secondAttribute="bottom" id="nqr-jy-Z0P"/>
+                                    <constraint firstItem="EhV-iC-4Pq" firstAttribute="top" secondItem="ei8-aP-k7l" secondAttribute="bottom" constant="8" id="p9r-IR-osx"/>
+                                    <constraint firstItem="08v-Jx-m68" firstAttribute="top" secondItem="Mmi-df-Vho" secondAttribute="top" constant="43" id="upW-Wy-bt9"/>
+                                    <constraint firstItem="ei8-aP-k7l" firstAttribute="top" secondItem="Y8t-Om-tR9" secondAttribute="bottom" constant="8" id="vhl-zm-nwy"/>
+                                    <constraint firstItem="ei8-aP-k7l" firstAttribute="leading" secondItem="08v-Jx-m68" secondAttribute="leading" id="wHg-G8-ynl"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ASc-Aw-WJd" customClass="CardView" customModule="CoinmarketCap" customModuleProvider="target">
+                                <rect key="frame" x="16" y="16" width="343" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pha-cv-eI0">
+                                        <rect key="frame" x="16" y="10" width="10" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOV-F9-5WR">
+                                        <rect key="frame" x="41" y="11.5" width="49" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="sCw-7s-pLk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="23"/>
+                                        <color key="textColor" red="0.96495386839999997" green="1" blue="0.92331429330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="CoinCell" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZr-HH-BL5">
+                                        <rect key="frame" x="301" y="11.5" width="26" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Oec-hM-BaO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="23"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.57254901960000004" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pha-cv-eI0" firstAttribute="leading" secondItem="ASc-Aw-WJd" secondAttribute="leading" constant="16" id="BJj-sA-Dns"/>
+                                    <constraint firstItem="JZr-HH-BL5" firstAttribute="centerY" secondItem="ASc-Aw-WJd" secondAttribute="centerY" id="EmS-Ov-8Cr"/>
+                                    <constraint firstAttribute="trailing" secondItem="JZr-HH-BL5" secondAttribute="trailing" constant="16" id="HQW-Pp-raJ"/>
+                                    <constraint firstItem="FOV-F9-5WR" firstAttribute="centerY" secondItem="ASc-Aw-WJd" secondAttribute="centerY" id="MPA-uP-HhT"/>
+                                    <constraint firstAttribute="height" constant="44" id="Nuk-kH-Mky"/>
+                                    <constraint firstItem="FOV-F9-5WR" firstAttribute="leading" secondItem="pha-cv-eI0" secondAttribute="trailing" constant="15" id="aOW-UA-xlm"/>
+                                    <constraint firstItem="pha-cv-eI0" firstAttribute="centerY" secondItem="ASc-Aw-WJd" secondAttribute="centerY" id="u3S-cv-D4R"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cJ-9n-y1w" customClass="CardView" customModule="CoinmarketCap" customModuleProvider="target">
+                                <rect key="frame" x="16" y="220" width="343" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume (24h) :  $176.123.123.123" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ti4-qY-mbD">
+                                        <rect key="frame" x="8" y="8" width="327" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="6Gy-JD-2uP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.46904903009999999" blue="0.82339843749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marketcap :  $176.123.123.123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSk-fc-z3U">
+                                        <rect key="frame" x="8" y="33" width="327" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="Md2-Id-Pl0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="19"/>
+                                        <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="DSk-fc-z3U" firstAttribute="leading" secondItem="1cJ-9n-y1w" secondAttribute="leading" constant="8" id="0BR-1O-ZHz"/>
+                                    <constraint firstItem="Ti4-qY-mbD" firstAttribute="leading" secondItem="1cJ-9n-y1w" secondAttribute="leading" constant="8" id="CZK-7A-xf3"/>
+                                    <constraint firstAttribute="height" constant="61" id="Hmp-lX-oI8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ti4-qY-mbD" secondAttribute="trailing" constant="8" id="Phs-3e-ViD"/>
+                                    <constraint firstAttribute="trailing" secondItem="DSk-fc-z3U" secondAttribute="trailing" constant="8" id="Wgq-QF-CZ5"/>
+                                    <constraint firstItem="Ti4-qY-mbD" firstAttribute="top" secondItem="1cJ-9n-y1w" secondAttribute="top" constant="8" id="nEx-PP-KCw"/>
+                                    <constraint firstItem="DSk-fc-z3U" firstAttribute="top" secondItem="Ti4-qY-mbD" secondAttribute="bottom" constant="8" symbolic="YES" id="xww-ID-573"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ASc-Aw-WJd" firstAttribute="leading" secondItem="s9U-aV-pie" secondAttribute="leading" constant="16" id="7aH-fH-5oD"/>
+                            <constraint firstItem="s9U-aV-pie" firstAttribute="trailing" secondItem="ASc-Aw-WJd" secondAttribute="trailing" constant="16" id="CJG-Pz-gtO"/>
+                            <constraint firstItem="1cJ-9n-y1w" firstAttribute="top" secondItem="ASc-Aw-WJd" secondAttribute="bottom" constant="160" id="E2W-Lj-3nE"/>
+                            <constraint firstItem="1cJ-9n-y1w" firstAttribute="leading" secondItem="s9U-aV-pie" secondAttribute="leading" constant="16" id="HJt-87-y6d"/>
+                            <constraint firstItem="s9U-aV-pie" firstAttribute="trailing" secondItem="1cJ-9n-y1w" secondAttribute="trailing" constant="16" id="SKr-Qh-bha"/>
+                            <constraint firstItem="Mmi-df-Vho" firstAttribute="leading" secondItem="CJK-xK-Gtb" secondAttribute="leading" constant="24" id="V3x-gN-pwF"/>
+                            <constraint firstItem="ASc-Aw-WJd" firstAttribute="top" secondItem="CJK-xK-Gtb" secondAttribute="top" constant="16" id="get-DH-gnW"/>
+                            <constraint firstAttribute="trailing" secondItem="Mmi-df-Vho" secondAttribute="trailing" constant="24" id="uLV-Xr-Qqb"/>
+                            <constraint firstItem="Mmi-df-Vho" firstAttribute="top" secondItem="CJK-xK-Gtb" secondAttribute="top" constant="30" id="wD3-WN-Gbt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s9U-aV-pie"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="availableSupply" destination="ei8-aP-k7l" id="Yf6-mr-705"/>
+                        <outlet property="changed1h" destination="JNI-Wd-or9" id="ppX-5B-zSv"/>
+                        <outlet property="changed24h" destination="nrs-2l-h3l" id="kSx-di-p2p"/>
+                        <outlet property="changed7d" destination="wY5-Vp-xPZ" id="2lg-KH-SMi"/>
+                        <outlet property="coinNameLabel" destination="FOV-F9-5WR" id="L0U-eC-di6"/>
+                        <outlet property="coinShortNameLabel" destination="JZr-HH-BL5" id="Pgm-Di-55L"/>
+                        <outlet property="marketCap" destination="DSk-fc-z3U" id="gdt-mq-PbF"/>
+                        <outlet property="maxSupply" destination="Y8t-Om-tR9" id="IiV-xa-xXk"/>
+                        <outlet property="rank" destination="pha-cv-eI0" id="r8d-Ez-96x"/>
+                        <outlet property="statusColorView" destination="ASc-Aw-WJd" id="BMR-0x-kZM"/>
+                        <outlet property="totalSupply" destination="EhV-iC-4Pq" id="9UF-Le-jY1"/>
+                        <outlet property="volume" destination="Ti4-qY-mbD" id="3FZ-0d-2vb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uPY-BH-mMO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="aa9-BO-1QD">
+                    <rect key="frame" x="0.0" y="0.0" width="419" height="126.5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LKb-4F-91P" customClass="CardView" customModule="CoinmarketCap" customModuleProvider="target">
+                            <rect key="frame" x="60" y="62.5" width="351" height="61"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marketcap :  $176.123.123.123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ3-fw-l39">
+                                    <rect key="frame" x="188.5" y="42" width="154.5" height="17"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="17" id="inW-RK-41W"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="16"/>
+                                    <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume (24h) :  $176.123.123.123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XT2-Oc-fhM">
+                                    <rect key="frame" x="8" y="42" width="128.5" height="17"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="17" id="e8T-xs-vJL"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="12"/>
+                                    <color key="textColor" red="0.0" green="0.46904903009999999" blue="0.82339843749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="pZ3-fw-l39" secondAttribute="bottom" constant="2" id="Lzk-s9-qev"/>
+                                <constraint firstItem="XT2-Oc-fhM" firstAttribute="leading" secondItem="LKb-4F-91P" secondAttribute="leading" constant="8" id="o1k-fG-xSh"/>
+                                <constraint firstAttribute="height" constant="61" id="pOU-um-a3z"/>
+                                <constraint firstItem="XT2-Oc-fhM" firstAttribute="bottom" secondItem="pZ3-fw-l39" secondAttribute="bottom" id="v1J-F6-MtG"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qGl-X3-kNt" customClass="CardView" customModule="CoinmarketCap" customModuleProvider="target">
+                            <rect key="frame" x="8" y="10" width="403" height="92.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWL-9z-yfE">
+                                    <rect key="frame" x="52" y="8" width="48.5" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="kRq-HV-stC"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="23"/>
+                                    <color key="textColor" red="0.96495386839999997" green="1" blue="0.92331429330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zk8-QK-OZB" customClass="CardView" customModule="CoinmarketCap" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="-4" width="44" height="100.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXq-aX-jFw">
+                                            <rect key="frame" x="17.5" y="8" width="10" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="CoinCell" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="un8-Kd-So5">
+                                            <rect key="frame" x="10" y="40" width="25" height="52.5"/>
+                                            <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="22"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.57254901960000004" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="44" id="06U-W5-9gr"/>
+                                        <constraint firstItem="sXq-aX-jFw" firstAttribute="top" secondItem="Zk8-QK-OZB" secondAttribute="top" constant="8" id="1WR-JH-bF6"/>
+                                        <constraint firstItem="un8-Kd-So5" firstAttribute="top" secondItem="Zk8-QK-OZB" secondAttribute="top" constant="40" id="Epp-L4-VAh"/>
+                                        <constraint firstItem="un8-Kd-So5" firstAttribute="centerX" secondItem="Zk8-QK-OZB" secondAttribute="centerX" id="Oel-Nn-RX4"/>
+                                        <constraint firstItem="sXq-aX-jFw" firstAttribute="centerX" secondItem="Zk8-QK-OZB" secondAttribute="centerX" id="X8O-mg-cy3"/>
+                                        <constraint firstAttribute="bottom" secondItem="un8-Kd-So5" secondAttribute="bottom" constant="8" id="tNt-3u-adg"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*24h:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9y-5R-DEK">
+                                    <rect key="frame" x="327.5" y="37.5" width="29.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="16"/>
+                                    <color key="textColor" red="0.95144807450000002" green="0.94674715710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgg-nL-CYH">
+                                    <rect key="frame" x="361" y="10.5" width="34" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="n89-NL-xpG"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="16"/>
+                                    <color key="textColor" red="0.28776392410000001" green="0.50830876830000005" blue="0.43508553890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1h:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyQ-8s-HIm">
+                                    <rect key="frame" x="340.5" y="11.5" width="16.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="16"/>
+                                    <color key="textColor" red="0.95144807450000002" green="0.94674715710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXi-qy-ubL">
+                                    <rect key="frame" x="361" y="61" width="34" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="yA5-ce-WiH"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="16"/>
+                                    <color key="textColor" red="0.28776392410000001" green="0.50830876830000005" blue="0.43508553890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total supply : 176.123.123.123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6b-1k-hE6">
+                                    <rect key="frame" x="52" y="69.5" width="143" height="17"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="17" id="8CB-dt-2uC"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="15"/>
+                                    <color key="textColor" red="0.92920616379999998" green="0.89360535389999995" blue="0.00065713180739999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7d:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdp-dE-MzU">
+                                    <rect key="frame" x="340.5" y="60.5" width="16.5" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="b0T-bE-qCf"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="16"/>
+                                    <color key="textColor" red="0.95144807450000002" green="0.94674715710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jz4-sE-vXy">
+                                    <rect key="frame" x="361" y="36" width="34" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="fAF-Pj-JY7"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="16"/>
+                                    <color key="textColor" red="0.28776392410000001" green="0.50830876830000005" blue="0.43508553890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available supply : 176.123.123.123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsW-AJ-3Vg">
+                                    <rect key="frame" x="52" y="50.5" width="163.5" height="17"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="17" id="kd1-wc-L5m"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="15"/>
+                                    <color key="textColor" red="0.84367882009999995" green="0.69401542309999997" blue="0.001432663181" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max supply : 176.123.123.123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQL-jC-ylx">
+                                    <rect key="frame" x="52" y="31.5" width="140.5" height="17"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="17" id="pP9-V6-a7X"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="15"/>
+                                    <color key="textColor" red="0.0" green="0.80800781249999998" blue="0.43695969569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="t6b-1k-hE6" firstAttribute="leading" secondItem="nWL-9z-yfE" secondAttribute="leading" id="1BV-Sl-9eO"/>
+                                <constraint firstItem="t6b-1k-hE6" firstAttribute="top" secondItem="GsW-AJ-3Vg" secondAttribute="bottom" constant="2" id="7Kp-c1-Jev"/>
+                                <constraint firstItem="TXi-qy-ubL" firstAttribute="leading" secondItem="hdp-dE-MzU" secondAttribute="trailing" constant="4" id="8IU-WA-jLJ"/>
+                                <constraint firstItem="jz4-sE-vXy" firstAttribute="centerY" secondItem="qGl-X3-kNt" secondAttribute="centerY" id="8SA-VY-HXh"/>
+                                <constraint firstAttribute="bottom" secondItem="Zk8-QK-OZB" secondAttribute="bottom" constant="-4" id="BTm-cl-gJf"/>
+                                <constraint firstItem="nWL-9z-yfE" firstAttribute="top" secondItem="qGl-X3-kNt" secondAttribute="top" constant="8" id="Fhf-HQ-T8b"/>
+                                <constraint firstItem="jgg-nL-CYH" firstAttribute="trailing" secondItem="jz4-sE-vXy" secondAttribute="trailing" id="JJG-st-9HS"/>
+                                <constraint firstItem="nWL-9z-yfE" firstAttribute="leading" secondItem="Zk8-QK-OZB" secondAttribute="trailing" constant="8" id="NHR-2e-Lz3"/>
+                                <constraint firstAttribute="trailing" secondItem="jz4-sE-vXy" secondAttribute="trailing" constant="8" id="NiL-Bs-CeR"/>
+                                <constraint firstItem="Zk8-QK-OZB" firstAttribute="top" secondItem="qGl-X3-kNt" secondAttribute="top" constant="-4" id="Vgz-og-cfn"/>
+                                <constraint firstItem="PyQ-8s-HIm" firstAttribute="bottom" secondItem="jgg-nL-CYH" secondAttribute="bottom" id="Z3G-py-wO7"/>
+                                <constraint firstItem="aQL-jC-ylx" firstAttribute="leading" secondItem="GsW-AJ-3Vg" secondAttribute="leading" id="Zm4-OY-KXg"/>
+                                <constraint firstItem="jgg-nL-CYH" firstAttribute="leading" secondItem="PyQ-8s-HIm" secondAttribute="trailing" constant="4" id="cEb-S5-af6"/>
+                                <constraint firstItem="jz4-sE-vXy" firstAttribute="top" secondItem="jgg-nL-CYH" secondAttribute="bottom" constant="4" id="cVc-jM-4mg"/>
+                                <constraint firstItem="TXi-qy-ubL" firstAttribute="top" secondItem="jz4-sE-vXy" secondAttribute="bottom" constant="4" id="dPN-nF-xUp"/>
+                                <constraint firstItem="GsW-AJ-3Vg" firstAttribute="top" secondItem="aQL-jC-ylx" secondAttribute="bottom" constant="2" id="emN-Qf-dqb"/>
+                                <constraint firstItem="TXi-qy-ubL" firstAttribute="trailing" secondItem="jz4-sE-vXy" secondAttribute="trailing" id="ewE-Jn-vQs"/>
+                                <constraint firstItem="hdp-dE-MzU" firstAttribute="bottom" secondItem="TXi-qy-ubL" secondAttribute="bottom" id="lxP-WY-YbC"/>
+                                <constraint firstItem="q9y-5R-DEK" firstAttribute="bottom" secondItem="jz4-sE-vXy" secondAttribute="bottom" id="mGc-yU-0wo"/>
+                                <constraint firstItem="jz4-sE-vXy" firstAttribute="leading" secondItem="q9y-5R-DEK" secondAttribute="trailing" constant="4" id="oz0-zj-JZq"/>
+                                <constraint firstItem="Zk8-QK-OZB" firstAttribute="leading" secondItem="qGl-X3-kNt" secondAttribute="leading" id="qaT-9h-FKo"/>
+                                <constraint firstItem="GsW-AJ-3Vg" firstAttribute="leading" secondItem="t6b-1k-hE6" secondAttribute="leading" id="rkc-lc-RZc"/>
+                                <constraint firstAttribute="bottom" secondItem="t6b-1k-hE6" secondAttribute="bottom" constant="6" id="sfP-Zp-cWz"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="LKb-4F-91P" secondAttribute="trailing" constant="8" id="I1j-Kn-t9Y"/>
+                        <constraint firstAttribute="bottom" secondItem="LKb-4F-91P" secondAttribute="bottom" constant="3" id="VWE-hE-5iv"/>
+                        <constraint firstItem="qGl-X3-kNt" firstAttribute="leading" secondItem="aa9-BO-1QD" secondAttribute="leading" constant="8" id="Xge-OJ-HTI"/>
+                        <constraint firstItem="pZ3-fw-l39" firstAttribute="trailing" secondItem="TXi-qy-ubL" secondAttribute="trailing" id="YBL-UV-h1K"/>
+                        <constraint firstItem="qGl-X3-kNt" firstAttribute="top" secondItem="aa9-BO-1QD" secondAttribute="top" constant="10" id="cN9-of-Jso"/>
+                        <constraint firstItem="LKb-4F-91P" firstAttribute="leading" secondItem="aa9-BO-1QD" secondAttribute="leading" constant="60" id="osG-ty-cUH"/>
+                        <constraint firstAttribute="bottom" secondItem="qGl-X3-kNt" secondAttribute="bottom" constant="24" id="tQt-Xk-PU7"/>
+                        <constraint firstAttribute="trailing" secondItem="qGl-X3-kNt" secondAttribute="trailing" constant="8" id="ugV-nX-eMO"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="0mF-jH-3wd"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="1720.8" y="31.934032983508249"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wew-Pi-Hd6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XHw-cs-QHE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9dE-zE-aoD">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="geH-pS-XhO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nmm-bx-nmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-390" y="70"/>
+        </scene>
+    </scenes>
+</document>
